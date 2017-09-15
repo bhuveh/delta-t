@@ -1,0 +1,39 @@
+$red: rgba(218,99,93,1.0);
+$wht: rgba(252,252,252,1.0);
+$blk: rgba(48,48,48,1.0);
+
+body {
+  background-color: $wht;
+}
+
+.front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: $red;
+  text-align: center;
+  padding: 60px;
+  
+  .title {
+    display: inline-block;
+    width: auto;
+    padding: 0px 20px;
+    border-bottom: solid 4px $wht;
+    font-family: 'Roboto Slab', serif;
+    color: $wht;
+    font-size: 40px;
+  }
+  .btn {
+    background-color: $wht;
+    color: $blk;
+    margin-top: 30px;
+    
+    &.dropdown-toggle {
+      background-color: $wht;
+    }
+  }
+  
+}
