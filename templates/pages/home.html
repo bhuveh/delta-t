@@ -1,0 +1,20 @@
+<div class='tbar container-fluid'>
+  DELTA-T User Interface
+</div>
+<div class='wrapper'>
+  <div class='sidebar'>
+    <div class='user-id'>
+      Coordinator ID: #{{id}}
+    </div>
+    <div class='menu' ng-controller='SidebarController'>
+      <div class='menu-item' ng-repeat='item in menu'>
+        <a ng-href='#'>
+          <div ng-bind-html='item.text'></div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class='main'>
+    Home Screen
+  </div>
+</div>       

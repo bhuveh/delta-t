@@ -16,17 +16,8 @@
   </head>
 
   <body ng-app='dtApp'>
-    <div class='front container-fluid' ng-controller='DTController'>
-      <div class='title'>DELTA-T User Interface</div>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Select Coordinator ID
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item text-right" ng-repeat='coordinator in coordinators' href="#">{{coordinator}}</a>
-        </div>
-      </div>
-    </div>
+    <!--View-->
+    <div ng-view ng-controller='DTController' class='main'></div>
     
     <!--Bootstrap-->
     <script type='text/javascript' src='./libraries/jquery/jquery-3.2.1.min.js'></script>
@@ -35,9 +26,10 @@
     
     <!--AngularJS-->
     <script type='text/javascript' src='./libraries/angular-1.6.5/angular.min.js'></script>
+    <script type='text/javascript' src='./libraries/angular-1.6.5/angular-route.min.js'></script>
     
     <!--Custom-->
     <script type='text/javascript' src='./script/index.js'></script>
-    
+    <script type='text/javascript' src='./script/routes.js'></script> 
   </body>
 </html>

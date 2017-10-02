@@ -1,0 +1,11 @@
+<div class='front container-fluid'>
+  <div class='title'>DELTA-T User Interface</div>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select Coordinator ID
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item text-right" ng-repeat='coordinator in coordinators' ng-href='#!/home' ng-click='setID(coordinator)'>#{{coordinator}}</a>
+    </div>
+  </div>
+</div>

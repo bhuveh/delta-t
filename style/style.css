@@ -1,5 +1,13 @@
 body {
-  background-color: #fcfcfc; }
+  background-color: #fcfcfc;
+  color: #303030; }
+
+.main {
+  height: 100vh; }
+
+.active {
+  color: red;
+  font-weight: bolder; }
 
 .front {
   position: absolute;
@@ -28,5 +36,59 @@ body {
       background-color: #fcfcfc; }
   .front .dropdown-item {
     width: 200px; }
+
+.tbar {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: 60px;
+  background-color: #da635d;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  color: #fcfcfc;
+  font-size: 24px;
+  line-height: 60px; }
+  .tbar:hover {
+    cursor: pointer; }
+
+.wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch; }
+  .wrapper .sidebar {
+    width: 250px;
+    background-color: #e6e6e6;
+    height: 100vh;
+    padding-top: 60px; }
+    .wrapper .sidebar .user-id {
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 10px;
+      border-bottom: solid 1px #fcfcfc; }
+      .wrapper .sidebar .user-id:hover {
+        cursor: pointer; }
+    .wrapper .sidebar .menu {
+      padding: 0;
+      font-size: 16px; }
+      .wrapper .sidebar .menu .menu-item {
+        border-bottom: solid 1px #fcfcfc; }
+        .wrapper .sidebar .menu .menu-item .red {
+          color: #da635d;
+          font-size: 12px; }
+        .wrapper .sidebar .menu .menu-item:hover {
+          background-color: #da635d; }
+          .wrapper .sidebar .menu .menu-item:hover .red {
+            color: #fcfcfc; }
+        .wrapper .sidebar .menu .menu-item a {
+          text-decoration: none;
+          color: #303030; }
+          .wrapper .sidebar .menu .menu-item a div {
+            padding: 10px 15px; }
+  .wrapper .main {
+    padding: 20px;
+    padding-top: 75px;
+    min-height: 100vh;
+    flex: 1 1 auto; }
 
 /*# sourceMappingURL=style.css.map */
