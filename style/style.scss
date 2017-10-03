@@ -95,19 +95,25 @@ a {
       width: 24px;
       margin: 5px auto;
       background-color: $wht;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
       transition: all 0.5s ease;
     }
     
     &.cross {
       .bar {
         &:nth-of-type(1) {
-          transform: translate(0px, 8.5px) rotate(45deg);
+          -webkit-transform: translate(0px, 8.5px) rotate(45deg);
+              -ms-transform: translate(0px, 8.5px) rotate(45deg);
+                  transform: translate(0px, 8.5px) rotate(45deg);
         }
         &:nth-of-type(2) {
           display: none;
         }
         &:nth-of-type(3) {
-          transform: translate(0px, -0.5px) rotate(-45deg);
+          -webkit-transform: translate(0px, -0.5px) rotate(-45deg);
+              -ms-transform: translate(0px, -0.5px) rotate(-45deg);
+                  transform: translate(0px, -0.5px) rotate(-45deg);
         }
       }
     }
@@ -133,18 +139,29 @@ a {
 
 //Home Sidebar & Content
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   
   sidebar {
     overflow: hidden;
     width: 250px;
-    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     background-color: $gry;
     height: 100vh;
     padding-top: 60px;
     z-index: 9;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     
     @media(max-width:720px){
@@ -200,7 +217,9 @@ a {
     padding: 20px;
     padding-top: 75px;
     min-height: 100vh;
-    flex: 1 1 auto;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 }
 
@@ -217,6 +236,9 @@ a {
   .comfort-slider.rzslider .rz-bar {
     margin-left: -22px;
     background: $red;
+    background: -webkit-gradient(linear, left bottom, left top, from(#005B96), color-stop(#77dd77), to(#ff6961));
+    background: -webkit-linear-gradient(bottom, #005B96, #77dd77, #ff6961);
+    background: -o-linear-gradient(bottom, #005B96, #77dd77, #ff6961);
     background: linear-gradient(to top, #005B96, #77dd77, #ff6961);
     height: 100%;
     width: 30px;
