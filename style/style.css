@@ -4,6 +4,13 @@ body {
 
 .main {
   height: 100vh; }
+  .main .cbox {
+    padding: 20px; }
+    .main .cbox .title {
+      text-align: center;
+      margin: 5px auto;
+      height: auto;
+      font-weight: 600; }
 
 a {
   color: #303030;
@@ -131,60 +138,74 @@ a {
     min-height: 100vh;
     flex: 1 1 auto; }
 
-.vote {
+.vote .slider {
+  height: 500px;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center; }
+.vote .comfort-slider.rzslider .rz-bar {
+  margin-left: -22px;
+  background: #da635d;
+  background: linear-gradient(to top, #005B96, #77dd77, #ff6961);
+  height: 100%;
+  width: 30px; }
+.vote .comfort-slider.rzslider .rz-pointer {
+  width: 42px;
+  height: 10px;
+  top: auto;
+  /* to remove the default positioning */
+  bottom: 0;
+  background-color: #303030;
+  margin-left: -6px; }
+.vote .comfort-slider.rzslider .rz-pointer:after {
+  display: none; }
+.vote .comfort-slider.rzslider .rz-bubble {
+  bottom: 0px;
+  margin-left: 10px; }
+.vote .comfort-slider.rzslider .rz-tick {
+  width: 10px;
+  height: 2px;
+  margin-left: -35px;
+  border-radius: 30px;
+  background: #303030;
+  top: -7px; }
+.vote .comfort-slider.rzslider .rz-limit {
+  display: none; }
+.vote .comfort-slider.rzslider .rz-tick-legend {
+  margin-left: -25px;
+  bottom: -15px; }
+.vote .vote-button {
+  width: 200px;
+  height: 60px;
+  background-color: #da635d;
+  color: #fcfcfc;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+  margin: 10px auto; }
+  .vote .vote-button:hover {
+    cursor: pointer; }
+
+.idata .met {
+  margin: 20px;
+  border: solid 1px #e6e6e6;
   padding: 20px; }
-  .vote .title {
+  .idata .met .mtitle {
+    width: 60%;
+    border-bottom: solid 1px #da635d;
     text-align: center;
-    margin: 5px auto;
-    height: auto;
-    font-weight: 600px; }
-  .vote .slider {
-    height: 500px;
-    padding: 20px;
-    margin: 20px auto;
-    text-align: center; }
-  .vote .comfort-slider.rzslider .rz-bar {
-    margin-left: -22px;
-    background: #da635d;
-    background: linear-gradient(to top, #005B96, #77dd77, #ff6961);
-    height: 100%;
-    width: 30px; }
-  .vote .comfort-slider.rzslider .rz-pointer {
-    width: 42px;
-    height: 10px;
-    top: auto;
-    /* to remove the default positioning */
-    bottom: 0;
-    background-color: #303030;
-    margin-left: -6px; }
-  .vote .comfort-slider.rzslider .rz-pointer:after {
-    display: none; }
-  .vote .comfort-slider.rzslider .rz-bubble {
-    bottom: 0px;
-    margin-left: 10px; }
-  .vote .comfort-slider.rzslider .rz-tick {
-    width: 10px;
-    height: 2px;
-    margin-left: -35px;
-    border-radius: 50%;
-    background: #303030;
-    top: -7px; }
-  .vote .comfort-slider.rzslider .rz-limit {
-    display: none; }
-  .vote .comfort-slider.rzslider .rz-tick-legend {
-    margin-left: -25px;
-    bottom: -15px; }
-  .vote .vote-button {
-    width: 200px;
-    height: 60px;
-    background-color: #da635d;
-    color: #fcfcfc;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px; }
+  .idata .met .mnum {
     font-family: 'Roboto Slab', serif;
-    font-size: 18px;
-    line-height: 60px;
-    text-align: center;
-    margin: 10px auto; }
-    .vote .vote-button:hover {
-      cursor: pointer; }
+    font-size: 56px;
+    padding: 20px;
+    text-align: center; }
+  .idata .met:hover {
+    background-color: #da635d;
+    cursor: pointer; }
+    .idata .met:hover .mtitle {
+      border-bottom: solid 1px #fcfcfc; }
 
 /*# sourceMappingURL=style.css.map */

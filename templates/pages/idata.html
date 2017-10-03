@@ -2,9 +2,19 @@
 <div class='wrapper'>
   <sidebar id='{{id}}' ng-class='{showsb:sidebar}'></sidebar>
   <div class='main' ng-hide='sidebar'>
-    <div class='idata'>
+    <div class='idata cbox'>
       <div class='title'>
         Instantaneous Data
+      </div>
+      <div class='row'>
+        <div class='col-sm met'>
+          <div class='mtitle'>Temperature</div>
+          <div class='mnum'>45&deg;C</div>
+        </div>
+        <div class='col-sm met'>
+          <div class='mtitle'>Humidity</div>
+          <div class='mnum'>30%</div>
+        </div>
       </div>
     </div>
   </div>
