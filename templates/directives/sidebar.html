@@ -1,0 +1,14 @@
+<div>
+  <a href='#!/home'>
+    <div class='user-id'>
+      Coordinator ID: #{{id}}
+    </div>
+  </a>
+  <div class='menu'>
+    <div class='menu-item' ng-repeat='item in menu'>
+      <a ng-href='#!/{{item.key}}'>
+        <div ng-bind-html='item.text'></div>
+      </a>
+    </div>
+  </div>
+</div>
