@@ -109,12 +109,11 @@
       templateUrl: './templates/directives/chart.html',
       link: function (scope, element, attrs){
         var svg = d3.select("svg"),
-            width = +svg.attr("width"),
-            height = +svg.attr("height"),
+            width = 500,
+            height = 500,
             innerRadius = 60,
             outerRadius = Math.min(width, height) / 2,
             g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-        
         
         var x = d3.scaleBand()
             .range([0, 2 * Math.PI])
@@ -160,8 +159,8 @@
 
           yTick.append("text")
               .attr("y", function(d) { return -y(d); })
-              .attr("dy", "-0.5em")
-              .attr("fill", "rgba(0,0,0,0.4)")
+              .attr("dy", "-0.4em")
+              .attr("fill", "rgba(0,0,0,0.2)")
               .text(y.tickFormat(5, "s"));
         });
         

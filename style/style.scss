@@ -295,6 +295,10 @@ a {
   .chart-div {
     text-align: center;
     padding: 10px;
+    max-height: 500px;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
