@@ -209,6 +209,10 @@ a {
   .vote .vote-button:hover {
     cursor: pointer; }
 
+.cdata .chart-div {
+  text-align: center;
+  padding: 10px; }
+
 .idata .met {
   margin: 20px;
   border: solid 1px #e6e6e6;
