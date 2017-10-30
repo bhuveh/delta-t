@@ -126,7 +126,7 @@
         var z = d3.scaleLinear()
             .range(['#e5918d','#da635d', '#984541']);
 
-        d3.csv("./sample-data/5-days.csv", function(error, data) {
+        d3.csv("./sample-data/365-days.csv", function(error, data) {
           if (error) throw error;
           x.domain(data.map(function(d) { return d.Date; }));
           y.domain([0, d3.max(data, function(d) { return d.Temperature; })]);
