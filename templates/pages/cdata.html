@@ -3,11 +3,10 @@
   <sidebar id='{{id}}' ng-class='{showsb:sidebar}'></sidebar>
   <div class='main' ng-hide='sidebar'>
     <div class='cdata cbox'>
-      <div class='title'>
-        Cumulative Data
-      </div>
+      <div class='title'>Cumulative Data</div>
       <div class='chart-div'>
-        <chart></chart>
+        <!--chart></chart-->
+        <chart data='dData' type='"daily"'></chart>
       </div>
     </div>
   </div>

@@ -2,9 +2,23 @@
 <div class='wrapper'>
   <sidebar id='{{id}}' ng-class='{showsb:sidebar}'></sidebar>
   <div class='main' ng-hide='sidebar'>
-    <div class='ebill'>
+    <div class='ebill cbox'>
       <div class='title'>
         Add Electricity Bill Screen
+      </div>
+      <div class='container-fluid'>
+        <div class='bill-form'>
+          <form>
+            <div>
+              <label>Service No.</label>
+              <input type='text'/>
+            </div>
+            <div>
+              <label>T No.</label>
+              <input type='text'/>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

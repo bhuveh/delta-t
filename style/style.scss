@@ -299,6 +299,20 @@ a {
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
+    
+    .button {
+      background-color: $gry;
+      padding: 4px;
+      margin: 20px 2px;
+      display: inline-block;
+      min-width: 100px;
+      color: $blk;
+      
+      &:hover {
+        color: $red;
+        cursor: pointer;
+      }
+    }
   }
 }
 

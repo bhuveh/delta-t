@@ -216,6 +216,16 @@ a {
   max-width: 500px;
   text-align: center;
   margin: 0 auto; }
+  .cdata .chart-div .button {
+    background-color: #e6e6e6;
+    padding: 4px;
+    margin: 20px 2px;
+    display: inline-block;
+    min-width: 100px;
+    color: #303030; }
+    .cdata .chart-div .button:hover {
+      color: #da635d;
+      cursor: pointer; }
 
 .idata .met {
   margin: 20px;

@@ -1,0 +1,74 @@
+[
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Jan",
+    "temp": 23.99,
+    "hum": 34.96
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Feb",
+    "temp": 24,
+    "hum": 35.02
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Mar",
+    "temp": 28.49,
+    "hum": 59.99
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Apr",
+    "temp": 28.49,
+    "hum": 59.94
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "May",
+    "temp": 28.5,
+    "hum": 59.88
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Jun",
+    "temp": 26,
+    "hum": 75.21
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Jul",
+    "temp": 26.01,
+    "hum": 74.75
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Aug",
+    "temp": 26,
+    "hum": 75.03
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Sep",
+    "temp": 26.01,
+    "hum": 75.15
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Oct",
+    "temp": 23.99,
+    "hum": 34.94
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Nov",
+    "temp": 24.01,
+    "hum": 34.94
+  },
+  {
+    "device_id": "4434aa34awe2",
+    "month": "Dec",
+    "temp": 24,
+    "hum": 35.04
+  }
+]
