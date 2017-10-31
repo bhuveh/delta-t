@@ -207,7 +207,33 @@ a {
   text-align: center;
   margin: 10px auto; }
   .vote .vote-button:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: #e6e6e6; }
+
+.ebill .bill-form {
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 20px; }
+  .ebill .bill-form .bill-div {
+    margin: 4px 5px; }
+    .ebill .bill-form .bill-div label {
+      width: 120px; }
+    .ebill .bill-form .bill-div input {
+      width: 230px;
+      margin-left: 10px; }
+.ebill .bill-button {
+  width: 200px;
+  height: 60px;
+  background-color: #da635d;
+  color: #fcfcfc;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: center;
+  margin: 10px auto; }
+  .ebill .bill-button:hover {
+    cursor: pointer;
+    color: #e6e6e6; }
 
 .cdata .chart-div {
   text-align: center;
@@ -218,11 +244,13 @@ a {
   margin: 0 auto; }
   .cdata .chart-div .button {
     background-color: #e6e6e6;
-    padding: 4px;
+    padding: 5px;
     margin: 20px 2px;
     display: inline-block;
     min-width: 100px;
-    color: #303030; }
+    color: #303030;
+    height: 40px;
+    line-height: 30px; }
     .cdata .chart-div .button:hover {
       color: #da635d;
       cursor: pointer; }

@@ -286,6 +286,41 @@ a {
     margin: 10px auto;
     &:hover {
       cursor: pointer;
+      color: $gry
+    }
+  }
+}
+
+//Electricity Bill
+.ebill {
+  .bill-form {
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;    
+    .bill-div {
+      margin: 4px 5px;
+      label {
+        width: 120px;
+      }
+      input {
+        width: 230px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .bill-button{
+    width: 200px;
+    height: 60px;
+    background-color: $red;
+    color: $wht;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    line-height: 60px;
+    text-align: center;
+    margin: 10px auto;
+    &:hover {
+      cursor: pointer;
+      color: $gry;
     }
   }
 }
@@ -302,11 +337,13 @@ a {
     
     .button {
       background-color: $gry;
-      padding: 4px;
+      padding: 5px;
       margin: 20px 2px;
       display: inline-block;
       min-width: 100px;
       color: $blk;
+      height: 40px;
+      line-height: 30px;
       
       &:hover {
         color: $red;
