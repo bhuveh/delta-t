@@ -1,7 +1,7 @@
 (function(){
   var app = angular.module('dtApp', [ 'ngRoute', 'rzModule' ]);
   
-  app.controller('DTController', ['$scope', 'AllData', function($scope, AllData) {
+  app.controller('DTController', ['$scope', 'AllData', '$window', function($scope, AllData, $window) {
     $scope.coordinators = ['0001','0002','0003'];
     
     $scope.id = '';
@@ -11,7 +11,6 @@
       AllData.dai()
         .then(function(response){
           $scope.dData = response.data;
-          console.log($scope.dData);
         }, function(response){
           console.log('Error');
       });
@@ -21,6 +20,14 @@
     $scope.toggleSidebar = function() {
       $scope.sidebar = !$scope.sidebar;
     };
+    
+    $scope.clickButton = function(button) {
+      if(button=='vote') {
+        $window.alert('Your vote has been submitted! Thanks for voting!');
+      } else if(button=='addBill') {
+        $window.alert('Bill details have been registered.');
+      }
+    }
   }]);
   
   app.controller('SidebarController', ['$scope', '$sce', function($scope, $sce) {
