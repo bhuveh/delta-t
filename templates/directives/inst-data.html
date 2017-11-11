@@ -1,0 +1,20 @@
+<div class='row'>
+  <div class='col-8'>
+    <div class='met'>
+      <div class='mtitle'>Temperature</div>
+      <div id='temp-box' class='mnum'>{{temp}}&deg;C</div>
+    </div>
+    <div class='met'>
+      <div class='mtitle'>Humidity</div>
+      <div id='hum-box' class='mnum'>{{hum}}%</div>
+    </div>
+  </div>
+  <div class='col-4'>
+    <div class='slider'>
+      <rzslider id='disp-pointer'
+                class='insta-slider'
+                rz-slider-model='slider.val'
+                rz-slider-options='slider.opt'></rzslider>
+    </div>
+  </div>
+</div>

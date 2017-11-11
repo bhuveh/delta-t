@@ -14,6 +14,12 @@ angular.module('dtApp')
     mon: function() {
       return $http({method: 'GET', url: url + '/cept-monthly.json'});
     },
+    ene: function() {
+      return $http({method: 'GET', url: url + '/energy-dummy.json'});
+    },
+    enm: function() {
+      return $http({method: 'GET', url: url + '/energy-dummy-2.json'});
+    },
     sam: function() {
       return $http({method: 'GET', url: 'sample.json'});
     },

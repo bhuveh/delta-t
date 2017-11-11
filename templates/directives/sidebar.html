@@ -1,13 +1,82 @@
 <div>
   <a href='#!/home'>
     <div class='user-id'>
-      Coordinator ID: #{{id}}
+      Coordinator ID: #{{uid}}
     </div>
   </a>
   <div class='menu'>
-    <div class='menu-item' ng-repeat='item in menu'>
-      <a ng-href='#!/{{item.key}}'>
-        <div ng-bind-html='item.text'></div>
+    <div class="menu-item">
+      <a href="#!/info">
+        <div>Site Info</div>
+      </a>
+    </div>
+    <div class="menu-item">
+      <a href="#!/vote">
+        <div>Comfort Survey</div>
+      </a>
+    </div>
+    <div class="menu-item">
+      <button type="button" data-toggle="collapse" data-target="#addDataMenu" aria-expanded="false" aria-controls="addDataMenu">
+        Add &amp; Edit Data
+      </button>
+    </div>
+    <div class="collapse" id="addDataMenu">
+      <div class="sub-menu-item menu-item">
+        <a href="#!/edit-info">
+          <div>Edit User Details</div>
+        </a>
+      </div>
+      <div class="sub-menu-item menu-item" ng-show="{{flag}}">
+        <a href="#!/edit-logg">
+          <div>Add &amp; Edit Logger Locations</div>
+        </a>
+      </div>
+      <div class="sub-menu-item menu-item">
+        <a href="#!/bill">
+          <div>Add Electricity Bill</div>
+        </a>
+      </div>
+    </div>
+    <div class="menu-item">
+      <button type="button" data-toggle="collapse" data-target="#viewDataMenu" aria-expanded="false" aria-controls="viewDataMenu">
+        View Data
+      </button>
+    </div>
+    <div class="collapse" id="viewDataMenu">
+      <div class="sub-menu-item menu-item">
+        <a href="#!/idata">
+          <div>Instantaneous Data</div>
+        </a>
+      </div>
+      <div class="sub-menu-item menu-item">
+        <a href="#!/cdata">
+          <div>Cumulative Data</div>
+        </a>
+      </div>
+      <div class="sub-menu-item menu-item">
+        <a href="#!/edata">
+          <div>Energy Consumption History</div>
+        </a>
+      </div>
+      <div class="sub-menu-item menu-item">
+        <a href="#!/plan">
+          <div>Logger Location Plan</div>
+        </a>
+      </div>
+    </div>
+    <div class="menu-item" ng-show="{{flag}}">
+      <a href="#!/acqn">
+        <div>Data Acquisition</div>
+      </a>
+    </div>
+    <div class="menu-item" ng-show="{{flag}}">
+      <a href="#!/expt">
+        <div>Data Export</div>
+      </a>
+    </div>
+    <div class="menu-item" ng-show="{{flag}}">
+      <a href="#!/read">
+        <div>Data Reading</div>
       </a>
     </div>
   </div>

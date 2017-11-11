@@ -1,12 +1,16 @@
-$red: rgba(218,99,93,1.0);
-$wht: rgba(252,252,252,1.0);
-$blk: rgba(48,48,48,1.0);
-$gry: rgba(230,230,230,1.0);
+$red: #fa4045;
+//$red: #779ecb;
+$wht: #ffffff;
+$blk: #5c5c5c;
+$gry: #d2d2d2;
+$dgry: #b3b3b3;
 
 body {
   background-color: $wht;
   color: $blk;
+  font-family: 'Ubuntu', sans-serif;
 }
+
 .main {
   height: 100vh;
   
@@ -16,7 +20,7 @@ body {
       text-align: center;
       margin: 5px auto;
       height: auto;
-      font-weight: 600;
+      font-weight: 700;
     }
   }
 }
@@ -25,7 +29,7 @@ a {
   color: $blk;
   text-decoration: none;
   &:hover {
-    color: $blk;
+    color: $wht;
     text-decoration: none;
   }
 }
@@ -39,31 +43,44 @@ a {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: $red;
-  text-align: center;
   padding: 60px;
+  text-align: center;
   
   .title {
     display: inline-block;
     width: auto;
-    padding: 0px 20px;
+    padding: 10px 20px;
     border-bottom: solid 4px $wht;
-    font-family: 'Roboto Slab', serif;
     color: $wht;
     font-size: 40px;
   }
-  .btn {
-    background-color: $wht;
-    color: $blk;
-    margin-top: 30px;
-    width: 200px;
+  
+  form {
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 300px;
     
-    &.dropdown-toggle {
-      background-color: $wht;
+    label {
+      color: $wht;
+    }
+    
+    small{
+      color: $wht;
+    }
+    
+    a {
+      width: 150px;
+      background-color: $gry;
+      color: $blk;
+      border-color: rgba(0, 0, 0, 0.15);
+      font-weight: 700;
+      &:hover {
+        background-color: $wht;
+        color: $red;
+        border-color: $red;
+      }
     }
   }
-  .dropdown-item {
-    width: 200px;
-  }  
 }
 
 //Home Topbar
@@ -123,7 +140,6 @@ a {
     display: inline-block;
     width: auto;
     text-align: center;
-    font-family: 'Roboto Slab', serif;
     font-size: 24px;
     line-height: 60px;
     
@@ -175,14 +191,10 @@ a {
     
     .user-id {
       text-align: center;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 16px;
       padding: 10px;
       border-bottom: solid 1px $wht;
-      
-      &:hover {
-        cursor: pointer;
-      }
     }
     
     .menu {
@@ -192,16 +204,8 @@ a {
       .menu-item {
         border-bottom: solid 1px $wht;
         
-        .red {
-          color: $red;
-          font-size: 12px;
-        }
-        
         &:hover {
           background-color: $red;
-          .red {
-            color: $wht;
-          }
         }
         
         a {         
@@ -209,6 +213,24 @@ a {
             padding: 10px 15px;
           }
         }
+        
+        button {
+          padding: 10px 15px;
+          border-width: 0px;
+          width: 100%;
+          background-color: transparent;
+          color: $blk;
+          text-align: left;
+          
+          &:hover {
+            color: $wht;
+            cursor: pointer;
+          }
+        }
+      }
+      
+      .sub-menu-item {
+        background-color: $dgry;
       }
     }
   }
@@ -223,10 +245,18 @@ a {
   }
 }
 
+//Site Information
+.sinfo {
+  .site-details {
+    text-align: center;
+  }
+}
+
 //Vote
-.vote {  
+.vote {
+  height: calc(100% - 60px);
   .slider {
-    height: 500px;
+    height: calc(100% - 90px);
     padding: 20px;
     margin: 20px auto;
     text-align: center;
@@ -235,11 +265,12 @@ a {
   //Slider
   .comfort-slider.rzslider .rz-bar {
     margin-left: -22px;
-    background: $red;
-    background: -webkit-gradient(linear, left bottom, left top, from(#005B96), color-stop(#77dd77), to(#ff6961));
-    background: -webkit-linear-gradient(bottom, #005B96, #77dd77, #ff6961);
-    background: -o-linear-gradient(bottom, #005B96, #77dd77, #ff6961);
-    background: linear-gradient(to top, #005B96, #77dd77, #ff6961);
+    background: $gry;
+    background: -webkit-gradient(linear, left bottom, left top, from(#0002a1), color-stop(#0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010), to(#7c0616));
+    background: -webkit-linear-gradient(bottom, #0002a1, #0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010, #7c0616);
+    background: -o-linear-gradient(bottom, #0002a1, #0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010, #7c0616);
+    background: -webkit-gradient(linear, left bottom, left top, from(#0002a1), color-stop(#0120d8), color-stop(#0374ff), color-stop(#00ffff), color-stop(#3aff03), color-stop(#ffff00), color-stop(#ff8800), color-stop(#d61010), to(#7c0616));
+    background: linear-gradient(to top, #0002a1, #0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010, #7c0616);
     height: 100%;
     width: 30px;
   }
@@ -279,7 +310,6 @@ a {
     height: 60px;
     background-color: $red;
     color: $wht;
-    font-family: 'Roboto Slab', serif;
     font-size: 18px;
     line-height: 60px;
     text-align: center;
@@ -313,7 +343,6 @@ a {
     height: 60px;
     background-color: $red;
     color: $wht;
-    font-family: 'Roboto Slab', serif;
     font-size: 18px;
     line-height: 60px;
     text-align: center;
@@ -355,10 +384,37 @@ a {
 
 //Instantaneous Data
 .idata {
+  height: 100%;
+  max-height: 622px;
+  @media(max-width: 480px) {
+      max-height: 388px;
+  }
+  @media(max-width: 380px) {
+      max-height: 372px;
+  }
+  
+  .row {
+    height: 100%;
+    .col-8, .col-4 {
+      height: 100%;
+      padding: 10px;
+    }
+  }
   .met {
-    margin: 20px;
+    max-width: 480px;
+    margin: 20px auto;
     border: solid 1px $gry;
-    padding: 20px;
+    padding: 40px 20px;
+    max-height: 50%;
+    
+    @media(max-height: 720px) {
+      padding: 20px;
+    }
+    
+    @media(max-width: 480px) {
+      padding: 15px;
+      margin: 10px auto;
+    }
     
     .mtitle {
       width: 60%;
@@ -366,19 +422,161 @@ a {
       text-align: center;
       margin: 0 auto;
       padding: 10px 10px 10px 10px;
+      
+      @media(max-width: 480px) {
+        font-size: 14px;
+        width: 90%;
+        padding: 5px 5px 10px 5px;
+      }
+      @media(max-width: 380px) {
+        font-size: 12px;
+        width: 96%;
+        padding: 2px 2px 8px 2px;
+      }
     }    
     .mnum {
-      font-family: 'Roboto Slab', serif;
       font-size: 56px;
       padding: 20px;
       text-align: center;
+      
+      @media(max-height: 720px) {
+        padding: 10px;
+      }
+      @media(max-width: 480px) {
+        padding: 10px;
+        font-size: 40px;
+      }
+      @media(max-width: 400px) {
+        padding: 10px;
+        font-size: 34px;
+      }
     }
+  }
+  
+  //Slider
+  .slider {
+    height: calc(100% - 30px);
+    margin: 10px auto;
+    text-align: center;
+  }
+  .insta-slider.rzslider {
+    left: 80px;
+    font-size: 14px;
+    line-height: 20px;
+    @media(max-width: 800px) {
+      left: 70px;
+      font-size: 13px;
+    }
+    @media(max-width: 480px) {
+      left: 60px;
+      font-size: 13px;
+    }
+    @media(max-width: 400px) {
+      left: 50px;
+      font-size: 11px;
+    }
+  }
+  /*Gradient Bar*/
+  .insta-slider.rzslider .rz-bar {
+    margin-left: -22px;
+    background: $gry;
+    background: -webkit-gradient(linear, left bottom, left top, from(#0002a1), color-stop(#0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010), to(#7c0616));
+    background: -webkit-linear-gradient(bottom, #0002a1, #0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010, #7c0616);
+    background: -o-linear-gradient(bottom, #0002a1, #0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010, #7c0616);
+    background: -webkit-gradient(linear, left bottom, left top, from(#0002a1), color-stop(#0120d8), color-stop(#0374ff), color-stop(#00ffff), color-stop(#3aff03), color-stop(#ffff00), color-stop(#ff8800), color-stop(#d61010), to(#7c0616));
+    background: linear-gradient(to top, #0002a1, #0120d8, #0374ff, #00ffff, #3aff03, #ffff00, #ff8800, #d61010, #7c0616);
+    height: 100%;
+    width: 30px;
+  }
+  /*Pointer*/
+  .insta-slider.rzslider .rz-pointer {
+    width: 40px;
+    height: 10px;
+    top: auto; /* to remove the default positioning */
+    bottom: 0;
+    background-color: #000;
+    margin-left: -5px;
+  }
+  .insta-slider.rzslider .rz-pointer:after {
+    display: none;
+  }
+  /*Ticks*/
+  .insta-slider.rzslider .rz-ticks {
+    left: -35px;
+  }
+  .insta-slider.rzslider .rz-tick {
+    width: 8px;
+    height: 2px;
+    margin-left: 4px;
+    border-radius: 30px;
+    background: $blk;
+    top: -7px;
+  }
+  .insta-slider.rzslider .rz-tick-legend {
+    bottom: -13px;
+    right: 15px;
+  }
+}
+
+//Energy Consumption History
+.edata {
+  .chart-div {
+    text-align: center;
+    padding: 10px;
+    max-height: 500px;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
     
-    &:hover {
-      background-color: $red;
-      cursor: pointer;
-      .mtitle {
-        border-bottom: solid 1px $wht;
+    .button {
+      background-color: $gry;
+      padding: 5px;
+      margin: 20px 2px;
+      display: inline-block;
+      min-width: 100px;
+      color: $blk;
+      height: 40px;
+      line-height: 30px;
+      
+      &:hover {
+        color: $red;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//Location Plan
+.plan {
+  .plan-img {
+    padding-top: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+      max-height: 500px;
+      width: auto;
+      height: auto;
+      @media(max-height: 720px) {
+        max-height: 350px;
+      }
+    }
+  }
+  .log-dets {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+    margin-top: 10px;
+    .det {
+      padding: 5px;
+      .loc {
+        display: inline-block;
+        width: 160px;
+      }
+      .id {
+        color: $red;
+        display: inline-block;
       }
     }
   }

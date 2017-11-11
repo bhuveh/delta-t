@@ -1,10 +1,11 @@
 <topbar></topbar>
 <div class='wrapper'>
-  <sidebar id='{{id}}' ng-class='{showsb:sidebar}'></sidebar>
+  <sidebar ng-class='{showsb:sidebar}'></sidebar>
   <div class='main' ng-hide='sidebar'>
-    <div class='edata'>
-      <div class='title'>
-        Energy Consumption History
+    <div class='edata cbox'>
+      <div class='title'>Energy Consumption History</div>
+      <div class='chart-div'>
+        <e-chart></e-chart>
       </div>
     </div>
   </div>
