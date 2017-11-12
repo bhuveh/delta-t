@@ -1,7 +1,7 @@
 <div>
   <a href='#!/home'>
     <div class='user-id'>
-      Coordinator ID: #{{uid}}
+      Coordinator ID: #{{user.id}}
     </div>
   </a>
   <div class='menu'>
@@ -23,10 +23,10 @@
     <div class="collapse" id="addDataMenu">
       <div class="sub-menu-item menu-item">
         <a href="#!/edit-info">
-          <div>Edit User Details</div>
+          <div>Edit User/Site Details</div>
         </a>
       </div>
-      <div class="sub-menu-item menu-item" ng-show="{{flag}}">
+      <div class="sub-menu-item menu-item" ng-show="{{user.flag}}">
         <a href="#!/edit-logg">
           <div>Add &amp; Edit Logger Locations</div>
         </a>
@@ -64,17 +64,17 @@
         </a>
       </div>
     </div>
-    <div class="menu-item" ng-show="{{flag}}">
+    <div class="menu-item" ng-show="{{user.flag}}">
       <a href="#!/acqn">
         <div>Data Acquisition</div>
       </a>
     </div>
-    <div class="menu-item" ng-show="{{flag}}">
+    <div class="menu-item" ng-show="{{user.flag}}">
       <a href="#!/expt">
         <div>Data Export</div>
       </a>
     </div>
-    <div class="menu-item" ng-show="{{flag}}">
+    <div class="menu-item" ng-show="{{user.flag}}">
       <a href="#!/read">
         <div>Data Reading</div>
       </a>

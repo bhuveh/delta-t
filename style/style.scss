@@ -2,6 +2,7 @@ $red: #fa4045;
 //$red: #779ecb;
 $wht: #ffffff;
 $blk: #5c5c5c;
+$lgry: #e4e4e4;
 $gry: #d2d2d2;
 $dgry: #b3b3b3;
 
@@ -10,12 +11,12 @@ body {
   color: $blk;
   font-family: 'Ubuntu', sans-serif;
 }
-
 .main {
   height: 100vh;
   
   .cbox {
-    padding: 20px;
+    padding: 10px;
+    
     .title {
       text-align: center;
       margin: 5px auto;
@@ -24,7 +25,6 @@ body {
     }
   }
 }
-
 a {
   color: $blk;
   text-decoration: none;
@@ -43,8 +43,12 @@ a {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: $red;
-  padding: 60px;
+  padding: 50px;
   text-align: center;
+  
+  @media(max-width: 560px){
+    padding: 35px;
+  }
   
   .title {
     display: inline-block;
@@ -53,6 +57,10 @@ a {
     border-bottom: solid 4px $wht;
     color: $wht;
     font-size: 40px;
+    
+    @media(max-width: 560px){
+      font-size: 30px;
+    }
   }
   
   form {
@@ -66,11 +74,12 @@ a {
     
     small{
       color: $wht;
+      font-size: 11px;
     }
     
     a {
       width: 150px;
-      background-color: $gry;
+      background-color: $lgry;
       color: $blk;
       border-color: rgba(0, 0, 0, 0.15);
       font-weight: 700;
@@ -83,7 +92,7 @@ a {
   }
 }
 
-//Home Topbar
+//Top Bar
 .tbar {
   position: fixed;
   top: 0;
@@ -248,7 +257,22 @@ a {
 //Site Information
 .sinfo {
   .site-details {
-    text-align: center;
+    max-width: 400px;
+    margin: 5px auto;
+    padding: 10px 5px;
+    border-bottom: solid 2px $red;
+    .site-detail {
+      padding: 5px 10px;
+      .sd-title {
+        color: $red;
+        max-width: 150px;
+        min-width: 140px;
+        display: inline-block;
+      }
+      .sd-content {
+        min-width: 200px;
+      }
+    }
   }
 }
 
@@ -324,29 +348,46 @@ a {
 //Electricity Bill
 .ebill {
   .bill-form {
-    max-width: 420px;
-    margin: 20px auto;
-    padding: 20px;    
-    .bill-div {
-      margin: 4px 5px;
-      label {
-        width: 120px;
-      }
-      input {
-        width: 230px;
-        margin-left: 10px;
-      }
-    }
+    font-size: 14px;
+    max-width: 400px;
+    margin: 0px auto;
+    padding: 0px 10px;    
   }
   .bill-button{
     width: 200px;
-    height: 60px;
+    height: 40px;
     background-color: $red;
     color: $wht;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 40px;
     text-align: center;
-    margin: 10px auto;
+    margin: 0px auto;
+    margin-top: 30px;
+    &:hover {
+      cursor: pointer;
+      color: $gry;
+    }
+  }
+}
+
+//Edit User Info
+.einfo {
+  .info-form {
+    font-size: 14px;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 10px;
+  }
+  .info-button{
+    width: 200px;
+    height: 40px;
+    background-color: $red;
+    color: $wht;
+    font-size: 18px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: 30px;
     &:hover {
       cursor: pointer;
       color: $gry;
@@ -386,6 +427,9 @@ a {
 .idata {
   height: 100%;
   max-height: 622px;
+  max-width: 720px;
+  overflow: hidden;
+  
   @media(max-width: 480px) {
       max-height: 388px;
   }
@@ -398,21 +442,24 @@ a {
     .col-8, .col-4 {
       height: 100%;
       padding: 10px;
+      @media(max-width:560px){
+        padding: 2px 5px;
+      }
     }
   }
   .met {
     max-width: 480px;
     margin: 20px auto;
     border: solid 1px $gry;
-    padding: 40px 20px;
+    padding: 30px 20px;
     max-height: 50%;
     
     @media(max-height: 720px) {
-      padding: 20px;
+      padding: 15px;
     }
     
     @media(max-width: 480px) {
-      padding: 15px;
+      padding: 10px;
       margin: 10px auto;
     }
     

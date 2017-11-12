@@ -2,16 +2,19 @@
   var app = angular.module('dtApp', [ 'ngRoute', 'rzModule' ]);
   
   app.controller('DTController', ['$scope', 'AllData', '$window', function($scope, AllData, $window) {
-    $scope.uid = '';
-    $scope.flag = 0;
+    $scope.user = {};
+    $scope.user.fname = "Old Name";
+    $scope.user.lname = "Old Name";
+    $scope.user.address = "Old Address";
+    
     
     $scope.setID = function(username){
       if(username == 'researcher') {
-        $scope.uid = '007';
-        $scope.flag = 1;
+        $scope.user.id = '007';
+        $scope.user.flag = 1;
       } else {
-        $scope.uid = '001';
-        $scope.flag = 0;
+        $scope.user.id = '001';
+        $scope.user.flag = 0;
       }
 
       AllData.dai()
@@ -38,6 +41,8 @@
         $window.alert('Your vote has been submitted! Thanks for voting!');
       } else if(button=='addBill') {
         $window.alert('Bill details have been registered.');
+      } else if(button=='saveInfo') {
+        $window.alert('User & site details have been updated!');
       }
     }
   }]);

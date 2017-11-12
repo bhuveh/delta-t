@@ -1,22 +1,13 @@
 <div class='front container-fluid'>
   <div class='title'>DELTA-T User Interface</div>
-  <!--div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Select Coordinator ID
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item text-right" ng-repeat='coordinator in coordinators' ng-href='#!/home' ng-click='setID(coordinator)'>#{{coordinator}}</a>
-    </div>
-  </div-->
   <form novalidate>
     <div class="form-group">
-      <input type="text" class="form-control" id="username" placeholder="Username" ng-model="username">
-      <small id="userNote" class="form-text">Enter username 'researcher' for researcher screens.</small>
+      <input type="text" class="form-control" id="username" placeholder="Username" ng-model="user.name">
+      <small id="userNote" class="form-text">Enter username 'researcher' for researcher-only screens.</small>
     </div>
     <div class="form-group">
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-      <small id="passNote" class="form-text">Passwords don't matter in this demo.</small>
+      <input type="password" class="form-control" id="password" placeholder="Password">
     </div>
-    <a class="btn btn-primary" ng-href='#!/home' ng-click='setID(username)'>Log In</a>
+    <a class="btn btn-primary" ng-href='#!/home' ng-click='setID(user.name)'>Log In</a>
   </form>
 </div>

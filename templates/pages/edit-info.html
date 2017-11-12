@@ -2,9 +2,46 @@
 <div class='wrapper'>
   <sidebar ng-class='{showsb:sidebar}'></sidebar>
   <div class='main' ng-hide='sidebar'>
-    <div class='info cbox container'>
+    <div class='einfo cbox container'>
       <div class='title'>
         Edit User &amp; Site Information
+      </div>
+      <div class='info-form'>
+        <form novalidate>
+          <div class="row">
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" ng-value="user.name" ng-model="user.name" readonly>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="uid">Coordinator ID</label>
+                <input type="text" class="form-control" id="uid" ng-value="user.id" ng-model="user.id" readonly>
+              </div>
+            </div>
+          </div>            
+          <div class="row">
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" ng-value="user.fname" ng-model="user.fname">
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" ng-value="user.lname" ng-model="user.lname">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea rows="3" class="form-control" id="address" ng-value="user.address" ng-model="user.address"></textarea>
+          </div>
+          <div class="info-button" ng-click='clickButton("saveInfo")'>SAVE</div>
+        </form>
       </div>
     </div>
   </div>
