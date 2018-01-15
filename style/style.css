@@ -34,19 +34,36 @@ a {
     .front {
       padding: 35px; } }
   .front .title {
-    display: inline-block;
+    display: block;
     width: auto;
-    padding: 10px 20px;
-    border-bottom: solid 4px #ffffff;
+    padding: 10px 20px 0px 20px;
     color: #ffffff;
-    font-size: 40px; }
+    font-size: 50px;
+    line-height: 54px;
+    cursor: default; }
     @media (max-width: 560px) {
       .front .title {
-        font-size: 30px; } }
+        font-size: 40px;
+        line-height: 42px; } }
+  .front .sub-title {
+    display: inline-block;
+    width: auto;
+    padding: 0px 20px 10px 20px;
+    border-bottom: solid 4px #ffffff;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: default; }
+    @media (max-width: 560px) {
+      .front .sub-title {
+        font-size: 14px;
+        padding-bottom: 5px; } }
   .front form {
     margin: 0 auto;
     margin-top: 40px;
     max-width: 300px; }
+    @media (max-width: 560px) {
+      .front form {
+        margin-top: 20px; } }
     .front form label {
       color: #ffffff; }
     .front form small {
