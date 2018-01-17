@@ -36,6 +36,14 @@
       $scope.sidebar = !$scope.sidebar;
     };
     
+    $scope.sidebarButton = 0;
+    $scope.setSidebarButton = function(button) {
+      $scope.sidebarButton = button;
+    };
+    $scope.isButton = function(button) {
+      return $scope.sidebarButton == button;
+    };
+    
     $scope.clickButton = function(button) {
       if(button=='vote') {
         $window.alert('Your vote has been submitted! Thanks for voting!');
