@@ -6,7 +6,7 @@ angular.module('dtApp')
       return $http({method: 'GET', url: url + '/cept-instantaneous.json'});
     },
     dai: function() {
-      return $http({method: 'GET', url: url + '/cept-daily.json'});
+      return $http({method: 'GET', url: url + '/365-days.json'});
     },
     wee: function() {
       return $http({method: 'GET', url: url + '/cept-weekly.json'});
